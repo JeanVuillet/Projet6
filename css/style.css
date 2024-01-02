@@ -1,0 +1,183 @@
+@import url("photographer.css");
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+* :focus{
+    border:solid white 3px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+h2 {
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+p{
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-decoration: none;
+}
+
+a{ text-decoration: none;}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.localisation{
+    color: #901C1C;
+}
+.tag{
+    color:black;
+}
+.price{
+    color:grey
+}
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+.photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name {
+    color: #D3573C;
+    font-size: 36px;
+}
+.photographer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #FAFAFA;
+    padding: 2rem;
+}
+.portrait {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit:cover;
+}
+
+#media{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#mediaTab{
+    margin-left:1fr;
+    margin-right:1fr;
+    display: grid;
+    grid-template-columns:  350px 350px 350px;
+    gap: 70px;
+    margin-top: 100px;
+    justify-content: space-between;
+  
+}
+.mediaArticle{
+    width:350px;
+}
+.visualSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mediaImg{
+    margin-left:auto;
+    margin-right:auto;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+.mediaVideo{
+    margin-left:auto;
+    margin-right:auto;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+.mediaDataSection{
+    display: flex;
+    justify-content: space-between;
+    color:#901C1C;
+    font-weight: 292px;
+    font-size: 24px;
+    line-height: 31.25px;
+ 
+}
+.likeBox{
+    display:flex;
+    gap:0.3rem;
+}
+.likePriceFooter{
+    /* self properties */
+    background-color: #DB8876;
+    width: 376px;
+    height: 89px;
+/* position */
+    position:fixed;
+    bottom: 0rem;
+    right: 3rem;
+    z-index: 2;
+/* self position */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* formulaire */
+#contact_modal{
+position:absolute;
+Width:669px;
+Height:900px;
+Top:62px;
+Left:385px;
+}
+.form{
+    display: flex;
+    
+}
+input{
+    font-size: 3rem;
+}
+.formMessage{
+    height: 14rem;
+}
+.hidden{
+    display:none;
+}

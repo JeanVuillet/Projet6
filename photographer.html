@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/76ea79564c.js" crossorigin="anonymous"></script>
+    <title>Fisheye - photographe </title>
+  </head>
+
+  <body id="body">
+  
+    
+
+      <header >
+        <img src="assets/images/logo.png" class="logo" />
+     <script src="https://kit.fontawesome.com/76ea79564c.js" crossorigin="anonymous"></script>
+      </header>
+
+    <main id="main" tabindex="1">
+      <section class="photographer">
+        
+        <button class="contact_button" id="contact_button" aria-label="contacter photographe" tabindex="1">Contactez-moi</button>
+      
+      </section>
+      <div class="finderZone">
+        <p class="trierPar">Trier par</p>
+        <div class="trieur" id="trieur">
+
+
+        <input type="checkbox" id="checkbox"  unchecked>
+         
+   
+          <div  class="trieurElements" id="trieurElement"   aria-live="polite">
+            <p id="selected"  tabindex="1"   aria-label="choisir système de trie des videos et images" >Popularité</p>
+            <span class="fa-solid fa-chevron-down chevron"></span>
+          </div>
+        </input>
+   
+        <div id="optionList" tabindex="1" >
+          <div class="trieurElements" id="popularité">
+            <p  tabindex="1" >Popularité<p>
+            <span class="fa-solid fa-chevron-up chevron"></span>
+          </div>
+          <p class="trieurElements" tabindex="1" id="date">Date</p>
+          <p class="trieurElements" tabindex="1" id="titre">Titre</p>
+        </div>
+     
+        </div>
+
+      </div>
+
+
+      <section id="media" aria-label="photographer work">
+     
+
+      </section>
+    </main>
+    <dialog class="lightBox" id="lightBoxModal">
+      <section id="caroussel">
+        <div id="leftSection" class="sideSection">
+          <button id="leftButton" class="carousselButton" aria-label='media précédent' tabindex="2"><em class="fa-solid fa-chevron-left"></em></button>
+        </div>
+        <div id="centerSection" tabindex="2">
+          <section id="mediaSection"  ></section>
+
+        </div>
+        <div id="rightSection" class="sideSection">
+          <button id="closeButton" class="carousselButton" aria-label='bouton fermer caroussel' tabindex="3"><em class="fa-solid fa-close"></em></button>
+          <button id="rightButton" class="carousselButton" aria-label=' bouton media suivant' tabindex="2"><em class="fa-solid fa-chevron-right"></em></button>
+        </div>
+      </section>
+    </dialog>
+
+    <dialog class= "modal" id="contact_modal" role="dialog" tabindex="2">
+		
+				<header>
+          <h2>Contactez-moi</h2>
+          <img id='modalCloseBtn'src="assets/icons/close.svg" alt="bouton fermeture du formulaire" tabindex="2">
+        </header>
+				<form class="form">
+					<div>
+						<label  id="PrenomUtilisateur">Prénom</label>
+						<input  id="inputPrenom" for="prenomUtilisateur" aria-label="prenomUtilisateur" tabindex="2">
+            <label id="nomUtilisateur" >Nom</label>
+            <input id="inputNom" for="nomUtilisateur" aria-label="nomUtilisateur"  tabindex="2">
+            <label id="emailUtilsateur" aria-label="Entrez email">Email</label>
+            <input id="inputEmail" for="emailUtilisateur" aria-label="emailUtilisateur" aria-describedby[]="email-format"  tabindex="2">
+            <span id="email-format" class="hidden" >quelquechose@domain.extension</span>
+         
+            <label id="votreMessage">Votre message</label>
+            <input id="inputMessage" class="formMessage" for="votreMessage" aria-label="votreMessage"  tabindex="2">
+					</div>
+          <button id=validButton class="contact_button"  tabindex="2">Envoyer</button>
+				</form>
+		
+		</dialog>
+    <script src="scripts/pages/photographer.js" type="module"></script>
+
+  </body>
+</html>
