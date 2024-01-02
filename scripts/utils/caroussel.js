@@ -119,6 +119,7 @@ export default async function getCaroussel(photographer, media, mediaElement) {
       // eslint-disable-next-line no-use-before-define
       main.style.display = "block";
     }
+
   });
   // zooming on video
   const focusMedia = document.getElementById("centerSection");
@@ -127,6 +128,36 @@ export default async function getCaroussel(photographer, media, mediaElement) {
       document.getElementById("video").focus();
     }
   });
+  // adding left right keys
+
+  const caroussel=document.getElementById('caroussel');
+  caroussel.addEventListener('keydown',(e)=>{
+      if (e.key === "ArrowRight") {
+        if (mediaIndex < media.length - 1) {
+          mediaSection.innerHTML = "";
+          // eslint-disable-next-line no-plusplus
+          mediaIndex++;
+          afficherMedia();
+          document.getElementById("centerSection").focus();
+        }}
+      if (e.key === "ArrowLeft") {
+        if (mediaIndex > 0) {
+          mediaSection.innerHTML = "";
+          // eslint-disable-next-line no-plusplus
+          mediaIndex--;
+          afficherMedia();
+          document.getElementById("centerSection").focus();
+        }
+    }
+    if (e.key === "Escape") {
+
+      mediaSection.innerHTML = "";
+      lightBox.style.display = "none";
+      // eslint-disable-next-line no-use-before-define
+      main.style.display = "block";
+    }
+  
+})
 
   // opening Caroussel
   lightBox.style.display = "flex";

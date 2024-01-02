@@ -116,6 +116,7 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
   visualSection.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
       getCaroussel(photographer[0], media, mediaElement);
+      document.getElementById('centerSection').focus();
     }
   });
   // adding mediaDataSection to article
