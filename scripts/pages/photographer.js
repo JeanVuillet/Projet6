@@ -29,7 +29,7 @@ async function apply() {
   const photographer = await Object.getPhotographerById(photographerID);
 
   // CREATING SORT SELECTOR
-  
+
   // getting dom elements
 
   const popularité = document.getElementById("popularité");
@@ -102,15 +102,15 @@ async function apply() {
 
   const NameH2 = document.createElement("h2");
   NameH2.setAttribute("class", "name");
-  NameH2.textContent = `${photographer[0].name}`;
+  NameH2.textContent = `${photographer.name}`;
 
   const localisationP = document.createElement("p");
   localisationP.setAttribute("class", "localisation");
-  localisationP.textContent = `${photographer[0].country}, ${photographer[0].city}`;
+  localisationP.textContent = `${photographer.country}, ${photographer.city}`;
 
   const tagP = document.createElement("p");
   tagP.setAttribute("class", "tag");
-  tagP.textContent = photographer[0].tagline;
+  tagP.textContent = photographer.tagline;
 
   infoSection.appendChild(NameH2);
 
@@ -129,9 +129,9 @@ async function apply() {
   const portraitImg = document.createElement("img");
   portraitImg.setAttribute(
     "src",
-    `assets/photographers/${photographer[0].portrait}`,
+    `assets/photographers/${photographer.portrait}`,
   );
-  portraitImg.setAttribute(`alt`, `photo de ${photographer[0].name}`);
+  portraitImg.setAttribute(`alt`, `photo de ${photographer.name}`);
   portraitImg.setAttribute("class", "portrait");
 
   // MEDIA SECTION
@@ -216,7 +216,7 @@ totalLikes=0;
   const likesP=document.getElementById('likesP');
 
 
-  priceP.textContent = `${photographer[0].price} € /jour`;
+  priceP.textContent = `${photographer.price} € /jour`;
   likesP.textContent=totalLikes;
   //creating likes ajusteur
 

@@ -86,9 +86,9 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
     const img = document.createElement("img");
     img.setAttribute(
       "src",
-      `assets/media/${photographer[0].name.substr(
+      `assets/media/${photographer.name.substr(
         0,
-        photographer[0].name.indexOf(" "),
+        photographer.name.indexOf(" "),
       )}/${mediaElement.image}`,
     );
     img.setAttribute("alt", `image ${mediaElement.title}`);
@@ -101,9 +101,9 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
     const video = document.createElement("video");
     video.setAttribute(
       "src",
-      `assets/media/${photographer[0].name.substr(
+      `assets/media/${photographer.name.substr(
         0,
-        photographer[0].name.indexOf(" "),
+        photographer.name.indexOf(" "),
       )}/${mediaElement.video}`,
     );
     video.setAttribute("alt", `video ${mediaElement.title}`);
@@ -115,11 +115,11 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
     mediaArticle.appendChild(visualSection);
   }
   visualSection.addEventListener("click", () => {
-    getCaroussel(photographer[0], media, mediaElement);
+    getCaroussel(photographer, media, mediaElement);
   });
   visualSection.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
-      getCaroussel(photographer[0], media, mediaElement);
+      getCaroussel(photographer, media, mediaElement);
       document.getElementById('centerSection').focus();
     }
   });

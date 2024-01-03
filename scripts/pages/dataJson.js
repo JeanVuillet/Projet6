@@ -18,14 +18,13 @@ export default class DataObject {
     const reponse = await fetch("data/photographers.json");
     const data = await reponse.json();
 
-    // const media =await data.filter(function (data){ data.media.id==id})
     return data;
   }
 
   async getPhotographerById(id) {
     const data = await getData();
-    const photographer = data.photographers.filter(
-      (photographers) => photographers.id == id,
+    const photographer = data.photographers.find(
+      (photographers) => photographers.id == id
     );
     return photographer;
   }
