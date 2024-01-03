@@ -236,4 +236,24 @@ form input {
 
 .chevron {
   padding-left: 1rem;
+}
+
+.priceLikesFooter {
+  /* self properties */
+  background-color: #DB8876;
+  width: 376px;
+  height: 89px;
+  /* position */
+  position: fixed;
+  bottom: 0rem;
+  right: 3rem;
+  z-index: 2;
+  /* self position */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.priceLikesFooter .likes {
+  display: flex;
+  gap: 5px;
 }/*# sourceMappingURL=photographer.css.map */

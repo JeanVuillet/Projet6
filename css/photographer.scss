@@ -274,3 +274,22 @@ z-index: 2;
 
 
 
+.priceLikesFooter{
+    /* self properties */
+    background-color: #DB8876;
+    width: 376px;
+    height: 89px;
+/* position */
+    position:fixed;
+    bottom: 0rem;
+    right: 3rem;
+    z-index: 2;
+/* self position */
+display: flex;
+justify-content: space-around;
+align-items: center;
+.likes{
+    display:flex;
+    gap:5px;
+}
+}

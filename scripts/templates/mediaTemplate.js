@@ -1,4 +1,5 @@
 import getCaroussel from "../utils/caroussel.js";
+import { liker } from "../pages/photographer.js";
 
 export default async function MediaTemplate(photographer, media, mediaElement) {
   const mediaArticle = document.createElement("article");
@@ -46,11 +47,15 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
       EmptyHeart.style.display = "none";
 
       likeParagraph.textContent = mediaElement.likes;
+
+      totalLikes++;
+      liker(1);
     } else {
       mediaElement.likes--;
       likeParagraph.textContent = mediaElement.likes;
       FullHeart.style.display = "none";
       EmptyHeart.style.display = "flex";
+      liker(-1);
     }
   });
   // preparing inclusive event listener

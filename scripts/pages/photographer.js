@@ -3,7 +3,15 @@ import MediaTemplate from "../templates/mediaTemplate.js";
 import contactForm from "../utils/contactForm.js";
 import getCaroussel from "../utils/caroussel.js";
 
-// getting photographer id
+
+export var totalLikes=0;
+
+ export function liker(a){
+  if ( a=1){ totalLikes++}
+  else if (a=-1){totalLikes--}
+
+}
+ // getting photographer id
 async function apply() {
   const params = new URL(document.location).searchParams;
   const photographerID = params.get("id");
@@ -17,6 +25,7 @@ async function apply() {
 
   // CREATING SORT SELECTOR
   // getting dom elements
+
   const popularité = document.getElementById("popularité");
   const date = document.getElementById("date");
   const trieurElement = document.getElementById("trieurElement");
@@ -176,6 +185,7 @@ async function apply() {
           photographer,
           media,
           mediaElement,
+        totalLikes= totalLikes+mediaElement.likes,
         );
         mediaTab.appendChild(mediaArticle);
       })();
@@ -187,13 +197,19 @@ async function apply() {
   sortingMedia("Popularité");
   mediaSectionCreator();
 
-  // SECTION PHOTOGRAPHER PRICE
+  // SECTION PHOTOGRAPHER PRICE Likes
 
   // creating price p
-  const priceP = document.createElement("footer");
-  priceP.setAttribute("class", "likePriceFooter");
-  priceP.textContent = `${photographer[0].price} € `;
-  mediaSection.appendChild(priceP);
+
+
+  const priceP=document.getElementById('priceP');
+  const likesP=document.getElementById('likesP');
+
+
+  priceP.textContent = `${photographer[0].price} € /jour`;
+  likesP.textContent=totalLikes;
+
+
 
   // CONTACT SECTION
 
