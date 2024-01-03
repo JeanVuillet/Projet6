@@ -48,7 +48,6 @@ export default async function MediaTemplate(photographer, media, mediaElement) {
 
       likeParagraph.textContent = mediaElement.likes;
 
-      totalLikes++;
       liker(1);
     } else {
       mediaElement.likes--;

@@ -4,11 +4,16 @@ import contactForm from "../utils/contactForm.js";
 import getCaroussel from "../utils/caroussel.js";
 
 
-export var totalLikes=0;
+var totalLikes=0;
 
  export function liker(a){
-  if ( a=1){ totalLikes++}
-  else if (a=-1){totalLikes--}
+  if ( a==1){ totalLikes++;
+    likesP.textContent='';
+    likesP.textContent=totalLikes;
+  }
+  else if (a==-1){totalLikes--;
+    likesP.textContent='';
+    likesP.textContent=totalLikes;}
 
 }
  // getting photographer id
@@ -24,6 +29,7 @@ async function apply() {
   const photographer = await Object.getPhotographerById(photographerID);
 
   // CREATING SORT SELECTOR
+  
   // getting dom elements
 
   const popularité = document.getElementById("popularité");
@@ -175,7 +181,7 @@ async function apply() {
 
 
 
-
+totalLikes=0;
 
     // implementing mediaArticls
     media.forEach((mediaElement) => {
@@ -185,10 +191,14 @@ async function apply() {
           photographer,
           media,
           mediaElement,
-        totalLikes= totalLikes+mediaElement.likes,
+     
         );
         mediaTab.appendChild(mediaArticle);
-      })();
+      }
+    
+      )();
+        totalLikes= totalLikes+mediaElement.likes;
+
     });
     mediaSection.innerHTML = "";
     // Implementing mediatab in dom
@@ -208,6 +218,7 @@ async function apply() {
 
   priceP.textContent = `${photographer[0].price} € /jour`;
   likesP.textContent=totalLikes;
+  //creating likes ajusteur
 
 
 
